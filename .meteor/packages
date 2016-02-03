@@ -18,3 +18,10 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 kadira:flow-router
 kadira:blaze-layout
+twbs:bootstrap
+aldeed:collection2
+aldeed:autoform
+meteortoys:allthings
+
+accounts-ui
+accounts-password
