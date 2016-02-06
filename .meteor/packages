@@ -22,6 +22,8 @@ twbs:bootstrap
 aldeed:collection2
 aldeed:autoform
 meteortoys:allthings
+check
+gwendall:auth-client-callbacks
 
 accounts-ui
 accounts-password

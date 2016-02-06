@@ -1,0 +1,14 @@
+<template name="OpenHouses">
+    {{> NewOpenHouse }}
+    
+    <section class="open-house">
+        {{#if Template.subscriptionsReady}}
+            {{#each openhouses}}
+                {{address}}
+                <a href="/{{author}}/0/{{_id}}">Read More</a>
+            {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
+</template>
