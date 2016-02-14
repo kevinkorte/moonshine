@@ -1,41 +1,27 @@
-OpenHouses = new Mongo.Collection('open-houses');
+Showings = new Mongo.Collection('showings');
 
-OpenHouses.allow({
+Showings.allow({
    insert: function(userId, doc) {
        return !!userId;
    } 
 });
 
-OpenHouseSchema = new SimpleSchema({
+ShowingSchema = new SimpleSchema({
     address: {
         type: String,
-        label: "Address",
-        optional: true
+        label: "Address"
     },
     city: {
         type: String,
-        label: "City",
-        optional: true
+        label: "City"
     },
     state: {
         type: String,
-        label: "State",
-        optional: true
+        label: "State"
     },
     zipcode: {
         type: String,
-        label: "Zipcode",
-        optional: true
-    },
-    starttime: {
-        type: String,
-        label: "Start Time",
-        optional: true
-    },
-    endtime: {
-        type: Date,
-        label: "End Time",
-        optional: true
+        label: "Zipcode"
     },
     author: {
         type: String,
@@ -59,4 +45,4 @@ OpenHouseSchema = new SimpleSchema({
     }
 });
 
-OpenHouses.attachSchema( OpenHouseSchema );
+Showings.attachSchema( ShowingSchema );

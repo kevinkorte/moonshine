@@ -24,6 +24,9 @@ aldeed:autoform
 meteortoys:allthings
 check
 gwendall:auth-client-callbacks
+fourseven:scss
+momentjs:moment
+deepwell:bootstrap-datepicker2
 
 accounts-ui
 accounts-password

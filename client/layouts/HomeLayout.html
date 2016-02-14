@@ -1,4 +1,6 @@
 <template name="HomeLayout">
-    Home Layout
-    {{> loginButtons}}
+    {{> Navigation }}
+    <main class="page">
+        {{> Template.dynamic template=home}}
+    </main>
 </template>

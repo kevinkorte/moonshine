@@ -1,4 +1,16 @@
-<template name="NewOpenHouse">
+<template name="Home">
+    <div class="overdue">
+        <h4>2 Overdue</h4>
+    </div>
+    <a class="new-open-house" href="#">New Open House</a>
+    
+    <div class="flex">
+        {{#each openhouseandshowings}}
+            <div class="item">
+                <a href="/{{author}}/{{_id}}">{{address}}</a>
+            </div>
+        {{/each}}
+    </div>
     
     {{#autoForm collection="OpenHouses" id="insertOpenHouseForm" type="insert"}}
     <fieldset>
@@ -11,4 +23,5 @@
     </fieldset>
     <button type="submit" class="btn btn-primary">Insert</button>
   {{/autoForm}}
+
 </template>

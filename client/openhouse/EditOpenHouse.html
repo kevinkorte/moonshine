@@ -1,0 +1,29 @@
+<template name="EditOpenHouse">
+    <div class="col-md-8 col-md-offset-2">
+        <div role="navigation">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class=" edit-tabs active" role="presentation">
+                <a href="#location" role="tab">Location</a></li>
+            <li class="edit-tabs" role="presentation">
+                <a href="#clients">Clients</a></li>
+            <li class="edit-tabs" role="presentation"><a href="#">Time</a></li>
+            <li class="edit-tabs" role="presentation"><a href="#">Guardians</a></li>
+        </ul>
+        {{#autoForm collection="OpenHouses" id="editOpenHouseForm" type=update doc=this}}
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="location">
+                    {{> afQuickField name='address'}}
+                    {{> afQuickField name='city'}}
+                    {{> afQuickField name='state'}}
+                    {{> afQuickField name='zipcode'}}
+                    {{> afQuickField name='starttime' type='datetime' class='datepicker'}}
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="clients">
+                    <span>Clients go here</span>
+                </div>
+            </div>
+      <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+    </div>
+    </div>
+</template>

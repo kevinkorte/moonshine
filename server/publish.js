@@ -6,3 +6,10 @@ Meteor.publish('OpenHouse', function(id) {
     check(id, String);
     return OpenHouses.find({_id: id});
 });
+
+Meteor.publish('OpenHouseAndShowings', function() {
+    return [
+        OpenHouses.find({}),
+        Showings.find({})
+    ];
+});

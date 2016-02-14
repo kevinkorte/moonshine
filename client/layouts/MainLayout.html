@@ -1,6 +1,7 @@
 <template name="MainLayout">
+    {{> Navigation }}
     {{> loginButtons}}
-    <main>
+    <main class="page">
         {{> Template.dynamic template=main}}
     </main>
 </template>

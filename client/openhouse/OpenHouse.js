@@ -13,3 +13,7 @@ Template.OpenHouse.helpers({
         return OpenHouses.findOne({_id: id, author: author});
     }
 });
+
+Template.NewOpenHouse.rendered = function() {
+  this.$('.datepicker').datepicker();
+}
