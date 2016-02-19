@@ -1,4 +1,7 @@
 <template name="EditOpenHouse">
+    {{#if Template.subscriptionsReady}}
+            {{#each openhouse}}
+    {{author}}
     <div class="col-md-8 col-md-offset-2">
         <div role="navigation">
         <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -9,14 +12,16 @@
             <li class="edit-tabs" role="presentation"><a href="#">Time</a></li>
             <li class="edit-tabs" role="presentation"><a href="#">Guardians</a></li>
         </ul>
-        {{#autoForm collection="OpenHouses" id="editOpenHouseForm" type=update doc=this}}
+        {{#autoForm collection="OpenHouses" id="editOpenHouseForm" type="update" doc=this autosaveOnKeyup=true trimStrings=false}}
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="location">
-                    {{> afQuickField name='address'}}
+                    {{> afQuickField name='address' placeholder="New Address"}}
                     {{> afQuickField name='city'}}
                     {{> afQuickField name='state'}}
                     {{> afQuickField name='zipcode'}}
                     {{> afQuickField name='starttime' type='datetime' class='datepicker'}}
+                    {{> afQuickField name='author'}}
+                    {{> afQuickField name='createdAt'}}
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="clients">
                     <span>Clients go here</span>
@@ -26,4 +31,8 @@
   {{/autoForm}}
     </div>
     </div>
+    {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
 </template>

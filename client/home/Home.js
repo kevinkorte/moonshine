@@ -14,15 +14,15 @@ Template.Home.helpers({
     }
 });
 
-Template.body.events({
-    "click .new-open-house": function (event) {
-        $('#insertOpenHouseForm').submit();
-        AutoForm.addHooks("insertOpenHouseForm", {
-            endSubmit: function() {
-                var formId = this.docId;
-                var userId = Meteor.userId();
-                FlowRouter.go('/'+userId+'/'+formId);
-            }
-        });
-    }
-});
+// Template.body.events({
+//     "click .new-open-house": function (event) {
+//         $('#insertOpenHouseForm').submit();
+//         AutoForm.addHooks("insertOpenHouseForm", {
+//             endSubmit: function() {
+//                 var formId = this.docId;
+//                 var userId = Meteor.userId();
+//                 FlowRouter.go('/'+userId+'/'+formId);
+//             }
+//         });
+//     }
+// });

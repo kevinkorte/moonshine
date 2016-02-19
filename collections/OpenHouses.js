@@ -3,14 +3,17 @@ OpenHouses = new Mongo.Collection('open-houses');
 OpenHouses.allow({
    insert: function(userId, doc) {
        return !!userId;
-   } 
+   },
+   update: function(userId, doc) {
+      return true;
+   }
 });
 
 OpenHouseSchema = new SimpleSchema({
     address: {
         type: String,
         label: "Address",
-        optional: true
+        optional: true,
     },
     city: {
         type: String,
