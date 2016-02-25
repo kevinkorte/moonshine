@@ -1,6 +1,6 @@
 <template name="EditOpenHouse">
     {{#if Template.subscriptionsReady}}
-            {{#each openhouse}}
+            {{#with openhouse}}
     {{author}}
     <div class="col-md-8 col-md-offset-2">
         <div role="navigation">
@@ -31,7 +31,7 @@
   {{/autoForm}}
     </div>
     </div>
-    {{/each}}
+    {{/with}}
         {{else}}
             <p>Loading</p>
         {{/if}}

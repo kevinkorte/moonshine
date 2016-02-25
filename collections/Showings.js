@@ -7,21 +7,42 @@ Showings.allow({
 });
 
 ShowingSchema = new SimpleSchema({
+    event: {
+        type: String,
+        label: "Event",
+        autoform: {
+            type: "hidden"
+        }
+    },
     address: {
         type: String,
-        label: "Address"
+        label: "Address",
+        optional: true
     },
     city: {
         type: String,
-        label: "City"
+        label: "City",
+        optional: true
     },
     state: {
         type: String,
-        label: "State"
+        label: "State",
+        optional: true
     },
     zipcode: {
         type: String,
-        label: "Zipcode"
+        label: "Zipcode",
+        optional: true
+    },
+    starttime: {
+        type: String,
+        label: "Start Time",
+        optional: true
+    },
+    endtime: {
+        type: Date,
+        label: "End Time",
+        optional: true
     },
     author: {
         type: String,

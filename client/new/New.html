@@ -1,0 +1,7 @@
+<template name="New">
+    <button class="btn btn-default" data-event="showing">Showing</button>
+    {{#autoForm collection="Showings" id="newShowing" type="insert"}}
+        {{> afQuickField name='event'}}
+        <!--<button type="submit" class="btn btn-primary">Insert</button>-->
+    {{/autoForm}}
+</template>
