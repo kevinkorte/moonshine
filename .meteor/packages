@@ -27,6 +27,26 @@ gwendall:auth-client-callbacks
 fourseven:scss
 momentjs:moment
 deepwell:bootstrap-datepicker2
+dburles:google-maps
+mrgalaxy:stripe
+random
+audit-argument-checks
+browser-policy
+digilord:faker
+meteorhacks:fast-render
+meteorhacks:npm
+meteorhacks:ssr
+reactive-dict
+reactive-var
+stevezhu:lodash
+templating
+themeteorchef:bert
+themeteorchef:jquery-validation
+jeremy:geocomplete
 
-accounts-ui
+
+accounts-base
 accounts-password
+accounts-ui
+
+npm-container

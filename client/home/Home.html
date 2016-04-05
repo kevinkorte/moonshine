@@ -1,27 +1,29 @@
 <template name="Home">
-    <div class="overdue">
-        <h4>2 Overdue</h4>
-    </div>
-    <a class="new-open-house" href="/new/open-house">New Open House</a>
-    
-    <div class="flex">
-        {{#each openhouseandshowings}}
-            <div class="item">
-                <a href="/{{author}}/{{_id}}">{{address}}</a>
+    <div class="container-fluid">
+        <div class="col-md-6 active-container">
+        </div>
+        <div class="col-md-6">
+            
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">
+                {{#autoForm collection="Viewings" id="insertViewing" type="insert"}}
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    {{> afQuickField name='address'}}
+                  </div>
+                 <button type="submit" class="btn btn-primary">Insert</button>
+                {{/autoForm}}
+              </div>
+              <!-- List group -->
+              <div class="list-group">
+                {{#each viewings}}
+                <a class="list-group-item" href="/{{author}}/{{_id}}">{{address}}</a>
+                {{/each}}
+              </div>
             </div>
-        {{/each}}
-    </div>
     
-    {{#autoForm collection="Showings" id="insertOpenHouseForm" type="insert"}}
-    <fieldset>
-      <legend>Add a Book</legend>
-      {{> afQuickField name='address'}}
-      {{> afQuickField name='city'}}
-      {{> afQuickField name='state'}}
-      {{> afQuickField name='zipcode'}}
-      {{> afQuickField name='starttime' type='datetime' class='datepicker'}}
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Insert</button>
-  {{/autoForm}}
+        </div>
+    </div>
 
 </template>

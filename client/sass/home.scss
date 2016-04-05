@@ -3,20 +3,13 @@
 @import "nav";
 @import "form";
 
-.overdue {
-  //padding: 14px 10px;
-  color: #fff;
-  background: $alert-red;
+.active-container {
+  height: 1000px;
+  background: blue;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px;
-}
-
-.item {
-    //margin: 0 2.5px;
-    border: 1px solid #ccc;
-    width: 25%;
 }

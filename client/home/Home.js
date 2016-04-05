@@ -1,8 +1,14 @@
 Template.Home.onCreated(function() {
     var self = this;
     self.autorun(function() {
-        self.subscribe('OpenHouseAndShowings');
+        self.subscribe('Viewings');
     })
+});
+
+Template.Home.helpers({
+    viewings: ()=> {
+        return Viewings.find();
+    }
 });
 
 Template.Home.helpers({

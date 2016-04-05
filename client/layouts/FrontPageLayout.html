@@ -1,4 +1,14 @@
 <template name="FrontPageLayout">
     Front Page Layout
-    {{> loginButtons}}
+    <main class="page">
+        <div class="container">
+            {{> loginButtons}}
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                     {{> Template.dynamic template=page}}
+                </div>
+            </div>
+        </div>
+       
+    </main>
 </template>

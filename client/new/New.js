@@ -1,13 +1,8 @@
-Template.New.onCreated(function() {
-    
-});
-
 Template.body.events({
-        "click .btn-default": function (event) {
+        "click .btn-primary": function (event) {
             var k = $(this).data('event');
             console.log(k);
-            $("input[name='event']").val(k);
-            $("#newShowing").submit();
+            $("#insertViewing").submit();
             
             AutoForm.addHooks("newShowing", {
                 endSubmit: function() {
@@ -25,3 +20,11 @@ Template.body.events({
             //Set up as home.js
         }
     });
+    
+Template.Home.onRendered(function() {
+  this.autorun(function () {
+    if (GoogleMaps.loaded()) {
+      $("#insertViewing input").geocomplete();
+    }
+  });
+});

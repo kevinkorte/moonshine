@@ -17,3 +17,9 @@ Meteor.publish('OpenHouseAndShowings', function() {
         Showings.find({})
     ];
 });
+
+Meteor.publish('Viewings', function() {
+    return [
+        Viewings.find({})
+    ];
+});
